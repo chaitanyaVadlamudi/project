@@ -1,0 +1,23 @@
+{
+  "name": "vehicledeals",
+  "description": "gives note about vehicles in the organisation",
+  "main": "index.js",
+  "authors": [
+    "chaitanya"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/chaitanyaVadlamudi/project",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "font-awesome": "^4.6.3",
+    "angular": "^1.5.8",
+    "js": "^5.9.1",
+    "underscore": "^1.8.3"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "vehicledeals",
+  "version": "1.0.0",
+  "description": "gives note about vehicles in the organisation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaitanyaVadlamudi/project.git"
+  },
+  "author": "chaitanya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chaitanyaVadlamudi/project/issues"
+  },
+  "homepage": "https://github.com/chaitanyaVadlamudi/project#readme"
+}

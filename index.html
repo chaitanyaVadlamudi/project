@@ -1,4 +1,4 @@
-<html ng-app>
+<html ng-app="vehicleDeals">
 <head>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
@@ -8,9 +8,13 @@
     <script src="bower_components/angular/angular.js"></script>
     </head>
 <body>
-    <input type="text" ng-model="first">
-    <input type="text" ng-model="second">
-    <h1> {{first*second}} </h1>
-   <script src="app/login/login.js"></script>
+  
+    <div ng-controller="registerCtrl">
+            <h1> {{heading}} </h1>
+            <h1> {{user}} </h1>
+        </div>
+     <script src="app/register/register.js"></script>
+    <script src="app/register/register-controller.js"></script>
+     <script src="app/login/login.js"></script>
   <script src="app/app.js"></script>
     </body></html>

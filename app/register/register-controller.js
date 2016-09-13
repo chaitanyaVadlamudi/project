@@ -4,11 +4,10 @@
     angular.module("register")
         .controller("registerCtrl",
                     function($scope){
-          console.log("welcome to the controller");
-        $scope.heading ="Register";
-        
-        $scope.user="sj";
-        
+         $scope.userDetails={};
+        $scope.registerUser=function(){
+            console.log($scope.userDetails)
+        };
        
     });
 })();

@@ -1,4 +1,4 @@
-
+<div ng-controller="registerCtrl">
     <div class="form-horizontal">
         <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">First Name</label>
@@ -28,16 +28,42 @@
                 <input type="text" class="form-control"  placeholder="Date Of Birth" ng-model="userDetails.DoB" >
             </div>
         </div>
-      
-        <div class="form-group">
-            <label for="inputEmail" class="control-label col-xs-2">Country</label>
+         <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-2">State</label>
             <div class="col-xs-4">
-                <select class="form-control" >
+                <select class="form-control" 
+                        ng-model="selectState"
+                        ng-options=" state.value group by state.countryCode for state in states"        >
                     <option value="">Please Select</option>
                 </select>
             </div>
         </div>
-       
+      
+     <!-- <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-2">Country</label>
+            <div class="col-xs-4">
+                <select class="form-control" 
+                        ng-change="loadStates()"
+                        ng-model="selectedCountry"
+                        ng-options="country.value for country in countries">
+                    <option value="">Please Select</option>
+                </select>
+            </div>
+        </div>
+         
+        
+         <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-2">State</label>
+            <div class="col-xs-4">
+                <select class="form-control" 
+                        
+                        ng-model="selectedState"
+                        ng-options="item.key for item in stateList" >
+                    <option value="">Please Select</option>
+                </select>
+            </div>
+        </div>
+     -->
         <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">Phone Number</label>
              <div class="col-xs-4">

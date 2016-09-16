@@ -76,7 +76,7 @@
         <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">Phone Number</label>
              <div class="col-xs-4">
-                <input type="text"  class="form-control" placeholder="Phone Number" ng-model="userDetails.phoneNumber"  name="phoneNumber" ng-pattern=/^\d/ ng-show-options="{update on:'blur'}" >
+                <input type="text"  class="form-control" placeholder="Phone Number" ng-model="userDetails.phoneNumber"  name="phoneNumber" ng-pattern=/[0-9]$/ ng-show-options="{update on:'blur'}" >
                 <div ng-show="register.phoneNumber.$dirty"><p ng-show="register.phoneNumber.$error.pattern">Enter only Digits</p></div> 
                   
             </div>
@@ -106,7 +106,7 @@
                  ng-click="registerUser()" >Register</button>
             </div>
         </div>
-        <pre> {{userDetails}} </pre>
+         <!--<pre> {{userDetails}} </pre>-->
     </div>
 </form>
   

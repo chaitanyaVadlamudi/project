@@ -18,6 +18,7 @@
     "font-awesome": "^4.6.3",
     "angular": "^1.5.8",
     "js": "^5.9.1",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "angular-ui-router": "^0.3.1"
   }
 }

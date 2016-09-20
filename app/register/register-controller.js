@@ -3,58 +3,14 @@
     //code goes here.
     angular.module("register")
         .controller("registerCtrl",
-            function ($scope) {
+            function ($scope,$state,lookupSvc) {
                 $scope.userDetails = {
                     terms: false
                 };
-                $scope.countries = [{
-                        "key": "IN",
-                        "value": "India"
-                    },
-                    {
-                        "key": "US",
-                        "value": "United States"
-                    }];
+                $scope.countries = lookupSvc.getCountrylist();
+                var states = lookupSvc.getStatelist();
         
-                var states = [{
-                        "countryCode": "IN",
-                        "key": "TG",
-                        "value": "Telangana"
-                    },
-                    {
-                        "countryCode": "IN",
-                        "key": "AP",
-                        "value": "Andhra Pradesh"
-                    },
-                    {
-                        "countryCode": "US",
-                        "key": "TX",
-                        "value": "Texas"
-                    }, {
-                        "countryCode": "US",
-                        "key": "NY",
-                        "value": "New York"
-                    }];
-        
-          $scope.states = [{
-                        "countryCode": "IN",
-                        "key": "TG",
-                        "value": "Telangana"
-                    },
-                    {
-                        "countryCode": "IN",
-                        "key": "AP",
-                        "value": "Andhra Pradesh"
-                    },
-                    {
-                        "countryCode": "US",
-                        "key": "TX",
-                        "value": "Texas"
-                    }, {
-                        "countryCode": "US",
-                        "key": "NY",
-                        "value": "New York"
-                    }];
+          $scope.states = 
             
         $scope.loadStates=function(){
             console.log($scope.selectedCountry);
@@ -69,6 +25,9 @@
 
                 $scope.registerUser = function () {
                     console.log($scope.userDetails)
+                    $state.go("home",{
+                        userDetails:$scope.userDetails
+                    });
                 };
             });
 })();

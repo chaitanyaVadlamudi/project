@@ -1,14 +1,18 @@
 (function(){
     'use strict'
     //module initilization
-    angular.module("vehicleDeals",["login","register","ui.router"]);
+    angular.module("vehicleDeals",["login","register","ui.router","home","lookup"]);
     //code goes here.
     //consuming the modeule
      angular.module("vehicleDeals")
      .config([ "$stateProvider",function($stateProvider){
          var basePath ="app/templates/"
          var homeObj={
-             templateUrl:basePath+"home.html"
+             templateUrl:basePath+"home.html",
+             params: {
+                 userName: ""
+             },
+             controller:"registerCtrl"
          };
          var registerObj={
              templateUrl:basePath+"register.html",

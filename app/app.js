@@ -22,7 +22,8 @@
              templateUrl:basePath+"login.html"
          };
           var vehiclesObj={
-             templateUrl:basePath+"vehicles.html"
+             templateUrl:basePath+"vehicles.html",
+              controller:"vehicleCtrl"
          };
          
          $stateProvider.state("home",homeObj);

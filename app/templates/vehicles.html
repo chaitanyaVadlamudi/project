@@ -53,22 +53,31 @@
                    ng-model="searchBymake">
        
     </div>
-
+<div class="col-sm-6 col-md-4">
+    
+    <button class="btn btn-primary" ng-click="changeSort">Order</button>
+    
+    </div>
+    <div class="col-sm-6 col-md-4">
+    <select ng-model="range" class="form-control" ng-options="item.range for item in filterRange"><option value="">please select</option></select></div>
 </div>
 <div class="row">
 
         <div class="col-sm-6 col-md-4" ng-repeat="vehicle in vehicles
              |filter:{model:searchBymodel}
              |filter:{price:searchByprice}
-             |filter:{make:searchBymake}">
+             |filter:{make:searchBymake}
+             |orderBy:sortBy
+             |rangeFilter:range">
              <div class="thumbnail">
                <img src="http://i614.photobucket.com/albums/tt224/blu3hamm3r/Aventador%20vs%20GTR/Aventador-1_zps30e6f4ca.jpg" width="55" height="55" alt="vehicle">
                 <div class="caption">
-                    <h3>{{vehicle.model}}</h3>
+                    <h3>{{vehicle.model|uppercase}}</h3>
                     <p>{{vehicle.make}}</p>
                     <!--<p>{{vehicle.price|currency:"INR."}}</p>-->
                     <p><i class="fa fa-inr"></i>{{vehicle.price|currency:""}}</p>
-                        
+                     <p><a href="#" ng-click="selectVehicle(vehicle)" class="btn btn-primary" role:"button" ng-if="!vehicle.isSelected">Select</a>
+                    <a href="#" ng-click="removeVehicle(vehicle)" class="btn btn-warning" role:"button" ng-if="vehicle.isSelected">Remove from Cart</a></p>   
                     <a href="#"  class="btn btn-primary" role="button" >{{$index}}</a>
                      </div>
             </div>

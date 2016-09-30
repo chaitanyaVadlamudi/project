@@ -54,7 +54,16 @@
                     $rootScope.$broadcast("VEHICLE-REMOVED", {
                         vehic: vehicle
                     });
-                }
+                };
+                               $scope.$watch("searchBymodel",function(newVal,oldVal){
+                                   console.log("old value is:" +oldVal);
+                                   console.log("New Value is:" +newVal)
+                               });
+                               setTimeout(function(){
+                                     $scope.searchByModel="Huracan";
+                                   $scope.$apply();
+                                   
+                               },3000);
 
     }]);
 

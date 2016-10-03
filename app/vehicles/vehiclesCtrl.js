@@ -62,8 +62,7 @@
                                setTimeout(function(){
                                      $scope.searchByModel="Huracan";
                                    $scope.$apply();
-                                   
-                               },3000);
+                                    },3000);
 
     }]);
 

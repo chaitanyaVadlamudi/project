@@ -37,9 +37,17 @@
           <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">Date Of Birth</label>
             <div class="col-xs-4">
-                <input type="text" class="form-control"  placeholder="Date Of Birth" ng-model="userDetails.DoB" >
-            </div>
+                <input type="text" class="form-control"  placeholder="Date Of Birth"  custom-datepicker ng-model="userDetails.DoB"  mindate="0" maxdate="1D">
         </div>
+              </div>
+         <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-2">Resevation</label>
+              <div class="col-xs-4">
+                <input type="text" class="form-control" placeholder="Reservation" ng-model="userDetails.reserve" custom-datepicker
+                       mindate="0" maxdate="+1D">
+                
+            </div>
+             </div>
          <!--  <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">State</label>
             <div class="col-xs-4">
@@ -79,7 +87,7 @@
         <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">Phone Number</label>
              <div class="col-xs-4">
-                <input type="text"  class="form-control" placeholder="Phone Number" numbers-only length="" ng-model="userDetails.phoneNumber"  name="phoneNumber"  ng-show-options="{update on:'blur'}" >
+                <input type="text"  class="form-control" placeholder="Phone Number" numbers-only length="9" ng-model="userDetails.phoneNumber"  name="phoneNumber"  ng-show-options="{update on:'blur'}" >
                 <div ng-show="register.phoneNumber.$dirty"><p ng-show="register.phoneNumber.$error.pattern">Enter only Digits</p></div> 
                   
             </div>

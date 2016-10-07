@@ -1,0 +1,21 @@
+<html ng-app="demoApp">
+
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="bower_components/angular/angular.js"></script>
+</head>
+
+<body>
+    <div ng-controller="clientA">
+      <h1>Client FlipKart: </h1>  <div custom-brand brand="{{shoes}}"></div>
+    </div>
+    <div ng-controller="clientB">
+       <h1>Client Amazon: </h1>  <div custom-brand brand="{{tees}}"></div>
+    </div>
+     <div ng-controller="clientC">
+        <h1>Client SnapDeal: </h1> <div custom-brand brand="{{sneakers}}"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

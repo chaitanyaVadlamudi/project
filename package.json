@@ -1,7 +1,7 @@
 {
   "name": "vehicledeals",
   "version": "1.0.0",
-  "description": "gives note about vehicles in the organisation",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -2,7 +2,7 @@
   "name": "vehicledeals",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpFile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/chaitanyaVadlamudi/project/issues"
   },
-  "homepage": "https://github.com/chaitanyaVadlamudi/project#readme"
+  "homepage": "https://github.com/chaitanyaVadlamudi/project#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.3",
+    "pump": "^1.0.1"
+  }
 }
